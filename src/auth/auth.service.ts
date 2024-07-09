@@ -1,14 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { SignInDto, SignUpDto } from './dto'; 
 import { UserService } from 'src/user/user.service';
-import {ConfigService} from "@nestjs/config";
+// import {ConfigService} from "@nestjs/config";
 
 @Injectable()
 export class AuthService {
 
   constructor(
     private readonly userService: UserService,
-    private readonly configService: ConfigService
+    // private readonly configService: ConfigService
   ) {}
 
   signUp(signUpDto: SignUpDto) {

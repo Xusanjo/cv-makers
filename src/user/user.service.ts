@@ -4,13 +4,13 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { SignInDto, SignUpDto } from 'src/auth/dto';
 import { NotFoundError } from "rxjs";
 import { JwtService } from "@nestjs/jwt";
-import { ConfigService } from "@nestjs/config";
+// import { ConfigService } from "@nestjs/config";
 
 @Injectable()
 export class UserService {
   constructor(
     private readonly jwtService: JwtService,
-    private readonly configService: ConfigService
+    // private readonly configService: ConfigService
   ){}
 
   private readonly users: any = [

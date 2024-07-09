@@ -8,7 +8,7 @@ import { UserController } from './user.Controller';
 @Module({
   imports: [JwtModule],
   controllers: [UserController],
-  providers: [UserService, ConfigService],
-  exports: [UserService],
+  providers: [UserService, ConfigService, JwtService],
+  exports: [UserService, JwtService],
 })
 export class UserModule {}

@@ -5,6 +5,8 @@ import { UpdateUserDto } from "./dto/update-user.dto";
 import { Roles } from "./roles";
 import { UserService } from "./user.service";
 
+import { UseGuards } from "@nestjs/common";
+import { AuthGuard } from "src/auth/auth.guard";
 
 export interface MyRequest extends Request {
     user: any
@@ -24,6 +26,7 @@ export class UserController{
     }
 
     @Get()
+    @UseGuards(AuthGuard)
     findAll(){
         return this.userService.findAll();
     }
