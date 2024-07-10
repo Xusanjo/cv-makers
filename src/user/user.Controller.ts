@@ -11,7 +11,12 @@ import { ConfigService } from "@nestjs/config";
 
 export interface MyRequest extends Request {
     user: any
-}
+}  
+
+
+
+
+
 
 @Controller("user")
 export class UserController{
